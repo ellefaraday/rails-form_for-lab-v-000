@@ -281,3 +281,10 @@ Processing by StudentsController#show as HTML
   [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
   Rendered students/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/1/edit" for 69.164.130.248 at 2018-05-25 15:10:25 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered students/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
