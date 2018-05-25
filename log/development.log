@@ -288,3 +288,26 @@ Processing by StudentsController#edit as HTML
   Parameters: {"id"=>"1"}
   Rendered students/edit.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/1/edit" for 69.164.130.248 at 2018-05-25 15:10:50 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered students/_form.html.erb (0.6ms)
+  Rendered students/edit.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Student Form</h1>
+    2: <%=form_for @student do |f|%>
+    3:   <%= f.label :first_name%>
+    4:   <%= f.text_field :first_name%>
+    5:   <%= f.label :last_name%>
+  app/views/students/_form.html.erb:2:in `_app_views_students__form_html_erb__1558534191951792412_28444820'
+  app/views/students/edit.html.erb:1:in `_app_views_students_edit_html_erb__681842993336134901_70215983736260'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.1ms)
